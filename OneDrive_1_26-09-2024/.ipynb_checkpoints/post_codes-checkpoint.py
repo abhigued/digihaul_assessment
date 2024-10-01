@@ -12,10 +12,10 @@ def get_data_from_post_codes(post_code):
 
     url = url.replace(" ", "%20")
 
-    contents = urllib.request.urlopen(url).read()
-
-    data = json.loads(contents)
-
-    df = pd.json_normalize(data['result'])
-
-    return df
+    try:
+        contents = urllib.request.urlopen(url).read()
+        data = json.loads(contents)
+        df = pd.json_normalize(data['result'])
+        return df
+    except:
+        pass
