@@ -8,7 +8,7 @@ import sqldf
 
 def get_data_from_lon_lat(lon, lat):
     
-    url = "https://api.postcodes.io/postcodes?lon=" + str(lon) + "&lat=" + str(lat)
+    url = "https://api.postcodes.io/outcodes?lon=" + str(lon) + "&lat=" + str(lat)
 
     url = url.replace(" ", "%20")
 

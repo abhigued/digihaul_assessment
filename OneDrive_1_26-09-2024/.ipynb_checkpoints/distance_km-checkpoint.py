@@ -20,6 +20,6 @@ def get_distance(df):
     
     df['distance'] = R*2*np.arctan2(np.sqrt(df['dummy_a']), np.sqrt(1 - df['dummy_a']))
     
-    df.drop(['index', 'dlong', 'dlat', 'dummy_a', 'Rad_LAST_DELIVERY_LATITUDE', 'Rad_LAST_DELIVERY_LONGITUDE', 'Rad_LAT', 'Rad_LON'],axis=1,inplace=True)
+    df.drop(['dlong', 'dlat', 'dummy_a', 'Rad_LAST_DELIVERY_LATITUDE', 'Rad_LAST_DELIVERY_LONGITUDE', 'Rad_LAT', 'Rad_LON'],axis=1,inplace=True)
     
     return df
